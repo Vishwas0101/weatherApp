@@ -1,0 +1,9 @@
+:root {
+    background-image: url("./assets/earth.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Optional: For a fixed background */
+
+}
