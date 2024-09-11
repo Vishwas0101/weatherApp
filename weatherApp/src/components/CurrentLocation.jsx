@@ -104,42 +104,47 @@ const CurrentLocation = () => {
     if (tempC) {
         return (
             <>
-                <div className="flex items-center justify-center mt-10 h-full">
-                    <div className="flex flex-col sm:flex-row w-full sm:w-2/3 h-auto">
-                        {/* Left side (weather details) */}
-                        <div className="w-full sm:w-1/2 p-4 bg-[#1E293B] bg-opacity-90 flex flex-col border-r border-[#38BDF8]">
-                            <div className="flex-1 text-[#E5E7EB] text-start text-3xl font-oxygen">
-                                {/* Main weather description and location */}
-                                <div className="mb-10 md:mb-6 lg:mb-64 text-3xl">
+                <div className="h-full w-full bg-[#0F172A] flex items-center justify-center bg-opacity-60 mt-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full p-4 sm:p-8">
+
+                        {/* Live Weather Data Widget - Compact */}
+                        <div className="bg-[#1E293B] bg-opacity-90 rounded-lg shadow-lg p-2 h-52">
+                            {/* Main weather description and location */}
+                            <div className="flex items-center text-[#E5E7EB] text-3xl sm:text-4xl justify-between">
+                                <div className="flex-col">
                                     {main}
                                     <img
                                         src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                                         alt={main || "Weather icon"}
-                                        className="w-30 h-30 inline-block ml-4"
+                                        className="w-16 h-16 sm:w-20 sm:h-20 inline-block ml-4"
                                     />
                                 </div>
-                                <div className="text-2xl font-bold">
-                                    <h2 className="text-[#A5F3FC]">{city}</h2>
-                                    <h3 className="text-[#A5F3FC]">{country}</h3>
+                                <div className="text-[#A5F3FC] mt-0 text-lg sm:text-xl">
+                                    <h2>{city}</h2>
+                                    <h3>{country}</h3>
                                 </div>
                             </div>
-                            {/* Footer: Date and Temperature */}
-                            <div className="flex justify-between items-center text-[#E5E7EB] text-lg md:text-2xl lg:text-3xl font-oxygen mt-auto pt-6 border-t border-[#38BDF8]">
-                                <div>{dateBuilder(new Date())}</div>
-                                <div className="text-[#e9a472] text-6xl md:text-8xl">{tempC}°C</div>
+
+                            {/* Date and Temperature Row */}
+                            <div className="flex justify-between items-center mt-10">
+                                <div className="text-s sm:text-3xl text-[#E5E7EB]">
+                                    {dateBuilder(new Date())}
+                                </div>
+                                <div className="text-[#e9a472] text-3xl sm:text-4xl md:text-6xl">
+                                    {tempC}°C
+                                </div>
                             </div>
                         </div>
 
-                        {/* Right side (Forecast component) */}
-                        <div className="w-full sm:w-1/2 p-4 bg-[#1E293B] bg-opacity-90 text-center">
-                            <div className="flex-1">
-                                <Forecast weather={main} />
+                        {/* Search City Widget - Larger */}
+                        <div className="sm:col-span-1 bg-[#1E293B] bg-opacity-90 rounded-lg shadow-lg p-4 sm:p-6">
+                            <div className="text-[#E5E7EB]">
+                                {/* Search City Component */}
+                                <Forecast />
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </>
         );
     } else {

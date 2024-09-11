@@ -7,24 +7,24 @@
 
 .hoverText:hover {
   font-weight: 900;
-  color: rgb(20, 90, 50); /* Dark Green */
-  background-image: linear-gradient(45deg, rgb(20, 90, 50), rgb(34, 49, 63)); /* Dark Green to Dark Blue Gradient */
+  color: rgb(119, 187, 148); /* Dark Green */
+  background-image: linear-gradient(45deg, rgb(108, 253, 171), rgb(162, 203, 240)); /* Dark Green to Dark Blue Gradient */
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .hoverText:hover + .hoverText {
   font-weight: 500;
-  color: rgb(34, 49, 63); /* Dark Blue */
-  background-image: linear-gradient(45deg, rgb(34, 49, 63), rgb(20, 90, 50)); /* Dark Blue to Dark Green Gradient */
+  color: rgb(126, 180, 231); /* Dark Blue */
+  background-image: linear-gradient(45deg, rgb(162, 203, 240), rgb(108, 253, 171)); /* Dark Blue to Dark Green Gradient */
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .hoverText:hover + .hoverText + .hoverText {
   font-weight: 300;
-  color: rgb(20, 90, 50); /* Dark Green */
-  background-image: linear-gradient(45deg, rgb(20, 90, 50), rgb(34, 49, 63)); /* Dark Green to Dark Blue Gradient */
+  color: rgb(85, 234, 149); /* Dark Green */
+  background-image: linear-gradient(45deg,  rgb(108, 253, 171), rgb(162, 203, 240)); /* Dark Green to Dark Blue Gradient */
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -32,8 +32,8 @@
 /* To the left */
 .hoverText:has(+ .hoverText:hover) {
   font-weight: 500;
-  color: rgb(34, 49, 63); /* Dark Blue */
-  background-image: linear-gradient(45deg, rgb(34, 49, 63), rgb(20, 90, 50)); /* Dark Blue to Dark Green Gradient */
+  color: rgb(67, 230, 255); /* Dark Blue */
+  background-image: linear-gradient(45deg,  rgb(162, 203, 240), rgb(108, 253, 171)); /* Dark Blue to Dark Green Gradient */
   -webkit-background-clip: text;
   background-clip: text;
 }

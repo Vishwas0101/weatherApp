@@ -1,9 +1,32 @@
 :root {
-    background-image: url("./assets/earth.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    /* Optional: For a fixed background */
+  background-image: url("./assets/galaxy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* Optional: For a fixed background */
 
+}
+
+body {
+  overflow: auto;
+}
+
+#globe-container {
+  width: 100vw;
+  /* Full viewport width */
+  height: 100vh;
+  /* Full viewport height */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  #globe-container {
+    width: 100vw;
+    height: 50vh;
+    /* Adjust height for mobile */
+  }
 }
